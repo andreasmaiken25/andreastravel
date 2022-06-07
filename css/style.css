@@ -1,0 +1,1156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: white;
+}
+
+/* Navbar */
+header {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 130px;
+  transition: 0.5s ease;
+}
+
+header .brand {
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+header .navigation {
+  position: relative;
+}
+
+header .navigation .navigation-items a {
+  position: relative;
+  color: whitesmoke;
+  font-size: 1em;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+.button {
+  padding: 1px 15px;
+  border: 2px solid #cc3554;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+
+header .navigation .navigation-items a:before {
+  content: "";
+  position: absolute;
+  background: #cc3554;
+  width: 0;
+  height: 3px;
+  bottom: -8px;
+  left: 0;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+
+header .navigation .navigation-items a:hover:before {
+  width: 100%;
+}
+
+/* Home */
+section {
+  padding: 100px 150px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #595260;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home:before {
+  z-index: 666;
+  content: "";
+  position: absolute;
+  background: rgba(89, 82, 96, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content {
+  z-index: 888;
+  width: 70%;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.home .content h2 {
+  font-size: 4vmin;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+.home .content .line {
+  width: 150px;
+  height: 4px;
+  background: #cc3554;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.home .content h1 {
+  font-size: 5vmin;
+  font-weight: 600;
+  padding-bottom: 35px;
+  color: whitesmoke;
+}
+
+.home .content a {
+  background: #cc3554;
+  padding: 10px 25px;
+  color: whitesmoke;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: 10px;
+  z-index: 999;
+  transition: 0.3s ease;
+}
+
+.home .content a:hover {
+  background-color: #595260;
+  transition: 0.3s ease;
+}
+
+.home .media-icons {
+  z-index: 777;
+  position: absolute;
+  display: flex;
+  transition: 0.5s ease;
+  padding-top: 300px;
+}
+
+.home .media-icons a {
+  color: whitesmoke;
+  font-size: 1.3em;
+  margin: 5px 10px;
+  transition: 0.3s ease;
+}
+
+.home .media-icons a:hover {
+  transform: scale(1.5);
+  color: #cc3554;
+}
+
+.home img {
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(180px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+  width: 10px;
+  height: 10px;
+  background: whitesmoke;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+  background: #cc3554;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.2);
+}
+
+.image-slider {
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.image-slider.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s ease;
+  transition-property: clip-path;
+}
+
+/* Navbar & Home */
+@media (max-width: 1040px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  header .navigation.active {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation .navigation-items a {
+    margin: 20px;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  header .navigation.active .navigation-items {
+    background: #595260;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-right-radius: 30%;
+    box-shadow: 0 4px 35px rgb(1 1 1 / 20%);
+    justify-content: center;
+  }
+
+  .menu-btn {
+    background: url("../img/navbar/menu.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active {
+    z-index: 999;
+    background: url("../img/navbar/close.png") no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
+}
+
+/* About Japan */
+#about {
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.about-container {
+  width: 900px;
+  margin: auto auto;
+}
+
+.image-gallery {
+  display: flex;
+  width: 100%;
+  min-height: 300px;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.image-box {
+  width: 22%;
+  height: 250px;
+  position: relative;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.image-box img:hover {
+  opacity: 0.5;
+}
+
+.image-box:nth-child(odd) {
+  align-self: flex-end;
+}
+
+.japan {
+  position: absolute;
+  bottom: -10%;
+  left: 45%;
+  font-weight: 500;
+  color: whitesmoke;
+  text-shadow: 2px 2px 2px black;
+}
+
+.about-info h2 {
+  font-size: 1.8rem;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.merah {
+  color: #b6002c;
+}
+.about-info p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: black;
+  font-weight: 300;
+}
+
+/* Responsife for About Japan */
+@media only screen and (max-width: 950px) {
+  .about-container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-container {
+    width: 90%;
+  }
+  .image-gallery {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .image-box {
+    width: 100%;
+    height: 400px;
+    margin: 1rem 0;
+  }
+  .japan {
+    display: none;
+  }
+  .image-box img {
+    padding: none;
+  }
+  .image-box:nth-child(odd) {
+    align-self: none;
+  }
+}
+
+/* Get To Know Japan */
+#gettoknowjapan {
+  padding-top: 80px;
+}
+
+#gettoknowjapan .title {
+  text-align: center;
+  color: #b6002c;
+  padding-bottom: 10px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+.jarak {
+  padding: 0 8px;
+}
+
+.card1 {
+  width: 280px;
+  height: 360px;
+  padding: 2rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+  border-radius: 10px;
+  align-items: center;
+  border: none;
+}
+
+.card1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  transition: 0.5s ease;
+  opacity: 0;
+  border-radius: 10px;
+}
+
+.card1:hover:before {
+  opacity: 1;
+}
+
+.card1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  transform: scale(20px);
+  border: none;
+}
+
+.card1 .info {
+  position: relative;
+  z-index: 3;
+  color: whitesmoke;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5s ease;
+  text-align: center;
+}
+
+.card1 .info h1 {
+  font-size: 25px;
+  margin: 0;
+}
+
+.card1 .info p {
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.card1:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+#gettoknowjapan svg {
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+/* Responsife for About Japan */
+@media only screen and (max-width: 950px) {
+  .container-japan {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-japan {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+  }
+  .wrapper {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .card1 {
+    width: 100%;
+    height: 400px;
+    margin: 10px 0;
+  }
+}
+
+.color {
+  background-color: #d3dedc;
+}
+
+/* Destination */
+#destination {
+  background: #f0d2d2;
+  padding-top: 50px;
+}
+
+.judul-12 {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 33px;
+  font-weight: 700;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding-bottom: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 450px;
+  background: whitesmoke;
+  display: flex;
+  border-radius: 60px;
+  padding: 2px 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+
+.search-bar input {
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 5px 15px;
+  font-size: 2015x;
+  color: #000000;
+}
+
+::placeholder {
+  color: black;
+}
+
+.search-bar button img {
+  width: 25px;
+}
+
+.search-bar button {
+  border: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #cc3554;
+  cursor: pointer;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  border: none;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.card img {
+  border-radius: 12px;
+  border: none;
+  object-fit: contain;
+  transition: 0.5s ease;
+}
+
+.card .card-body h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.garis {
+  width: 50px;
+  height: 4px;
+  background: #cc3554;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.card .card-body h5 {
+  text-align: center;
+  padding-bottom: 3px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #ffc400;
+  letter-spacing: 1px;
+  justify-content: space-between;
+}
+
+.card .card-body h5 span {
+  color: black;
+  padding-left: 1.5rem;
+  font-weight: 600;
+}
+
+.tombol {
+  background: #cc3554;
+  color: whitesmoke;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+/* View More */
+.view-more {
+  align-items: center;
+  margin: auto;
+  padding-top: 35px;
+}
+.view-more a {
+  margin-top: 4rem;
+  display: grid;
+  height: 35px;
+  width: 200px;
+  background: whitesmoke;
+  position: absolute;
+  margin: auto;
+  place-items: center;
+  color: black;
+  font-weight: 350;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 15px;
+  border-radius: 5px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
+}
+
+.view-more a:hover {
+  background: black;
+  transition: 0.3s ease;
+  color: white;
+}
+
+/* Testimonial */
+.judul-2 h2 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 600;
+  color: whitesmoke;
+  padding-top: 50px;
+}
+
+.line-1 {
+  width: 300px;
+  height: 4px;
+  background: #cc3554;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.jarakk {
+  padding-bottom: 20px;
+}
+
+.testi-wrap {
+  width: 100%;
+  height: auto;
+  display: grid;
+  background: url(../img/testimonial/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.testi-in {
+  width: 100%;
+  margin: auto;
+  margin: 0 2px;
+}
+
+.testi-in-content {
+  width: 100%;
+  height: auto;
+  position: relative;
+  background: whitesmoke;
+  padding: 25px 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  z-index: 11;
+}
+
+.testi-in-content:before {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: whitesmoke;
+  transform: rotate(45deg);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.testi-in-content p {
+  font-size: 14px;
+  color: black;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.testi-in-image {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.testi-in-image img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.testi-in-image h2 {
+  font-size: 16px;
+  color: whitesmoke;
+  font-weight: 500;
+  padding-bottom: 25px;
+}
+
+.testi-in-image h2 span {
+  font-size: 14px;
+  color: whitesmoke;
+  font-weight: 300;
+  line-height: 25px;
+}
+
+.jarak55 {
+  padding-bottom: 50px;
+}
+
+/* Swiper JS */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-pagination {
+  margin-top: 30px;
+}
+
+/* DESTINATION */
+.jarakdestination {
+  padding-top: 10rem;
+  background: #b8405e;
+}
+
+/* Footer */
+.jarak321 {
+  padding-top: 100px;
+  background: #b8405e;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  background: #cc3554;
+  min-height: 90px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../img/footer/wave.png);
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 0;
+  bottom: 0;
+  animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 10px;
+  animation: animateWave 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* Gallery */
+.judul-gallery {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.judul-gallery h2 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 600;
+  color: black;
+  padding-top: 50px;
+}
+
+.judul-gallery .line-12 {
+  width: 150px;
+  height: 4px;
+  background: #cc3554;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+#gallery {
+  max-width: 85%;
+  margin: 20px auto;
+}
+
+#gallery .image-container {
+  columns: 3 250px;
+  gap: 15px;
+}
+
+#gallery .image-container img {
+  margin-bottom: 10px;
+  border: 5px;
+  width: 100%;
+}
+
+/* Footer */
+.jarak-footer {
+  padding-top: 250px;
+}
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #cc3554;
+}
+
+footer .container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+footer .container .sec h2 {
+  position: relative;
+  color: whitesmoke;
+  font-weight: 500;
+}
+
+footer .container .sec h2:before {
+  content: "";
+  position: absolute;
+}
+
+footer .container .sec p {
+  color: whitesmoke;
+  padding-top: 10px;
+}
+
+.sci {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-gap: 10px;
+  color: whitesmoke;
+}
+.sci li {
+  list-style: none;
+}
+
+.sci li a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: #b8002c;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.sci li a:hover {
+  background: whitesmoke;
+  transition: 0.3s ease;
+  color: #b8002c;
+}
+
+.quicklinks li {
+  list-style: none outside;
+  margin-left: -30px;
+  padding-top: 10px;
+}
+
+.quicklinks li a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.info {
+  position: relative;
+}
+
+.info li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 16px;
+  margin-left: -30px;
+  padding-top: 10px;
+}
+
+.info li span {
+  color: whitesmoke;
+}
+
+.info li span:nth-child(1) {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.info a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.contact {
+  padding-left: 10px;
+}
+
+.underline {
+  width: 35%;
+  height: 5px;
+  background: #767676;
+  border-radius: 3px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  overflow: hidden;
+  padding-bottom: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+}
+
+.underline span {
+  width: 25px;
+  height: 100%;
+  background: whitesmoke;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  animation: moving 2s linear infinite;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.copyrightText {
+  text-align: center;
+  background-color: #9c3751;
+  color: whitesmoke;
+  padding-top: 24px;
+  padding-bottom: 1px;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  footer {
+    padding: 40px;
+  }
+  footer .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  footer .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(../img/footer/wave.png);
+  background-size: 1000px 100px;
+}
+
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 0;
+  bottom: 0;
+  animation: animateWave_02 4s linear infinite;
+}
+
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave 4s linear infinite;
+}
+
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave_02 3s linear infinite;
+}
+
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 10px;
+  animation: animateWave 3s linear infinite;
+}
+
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+/* Book */
+#booking .book-form {
+  padding: 2rem;
+}
+
+#booking .book-form .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#booking .book-form .flex .inputBox {
+  flex: 1 1 41rem;
+}
+
+/* Book */
+.jarak89 {
+  padding-top: 6rem;
+}
+
+.text {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.line-14 {
+  width: 200px;
+  height: 4px;
+  background: #cc3554;
+  margin: 10px auto;
+  border-radius: 10px;
+}
+
+.jarak-365 {
+  padding-top: 3rem;
+}
+
+.form-label {
+  font-weight: 500;
+}
