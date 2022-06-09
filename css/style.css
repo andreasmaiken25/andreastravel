@@ -532,8 +532,7 @@ section {
 }
 
 .search-bar {
-  width: 95%;
-  max-width: 440px;
+  width: 100%;
   background: whitesmoke;
   display: flex;
   border-radius: 60px;
