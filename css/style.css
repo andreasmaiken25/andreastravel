@@ -536,7 +536,7 @@ section {
   background: whitesmoke;
   display: flex;
   border-radius: 60px;
-  padding: 2px 20px;
+  padding: 5px 0;
   backdrop-filter: blur(4px) saturate(180%);
 }
 
