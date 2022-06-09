@@ -247,7 +247,7 @@ section {
   }
 
   header .navigation.active .navigation-items {
-    background: #595260;
+    background: #595260ee;
     width: 100%;
     height: 100vh;
     display: flex;
