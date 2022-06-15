@@ -8,7 +8,7 @@
 }
 
 body {
-  background: white;
+  background: whitesmoke;
 }
 
 /* Navbar */
@@ -511,7 +511,7 @@ section {
 
 /* Destination */
 #destination {
-  background: #f0d2d2;
+  background: #595260;
   padding-top: 50px;
 }
 
@@ -536,8 +536,15 @@ section {
   background: whitesmoke;
   display: flex;
   border-radius: 60px;
-  padding: 5px 0;
+  margin: none;
+  padding: 5px 20px;
   backdrop-filter: blur(4px) saturate(180%);
+}
+
+@media (min-width: 992px) {
+  .search-bar {
+    margin: 0 200px;
+  }
 }
 
 .search-bar input {
@@ -895,7 +902,7 @@ footer {
   width: 100%;
   height: auto;
   padding: 50px 100px;
-  background: #cc3554;
+  background: #595260;
 }
 
 footer .container {
@@ -1035,7 +1042,7 @@ footer .container .sec p {
 
 .copyrightText {
   text-align: center;
-  background-color: #9c3751;
+  background-color: #443f49;
   color: whitesmoke;
   padding-top: 24px;
   padding-bottom: 1px;
@@ -1063,7 +1070,7 @@ footer .wave {
   left: 0;
   width: 100%;
   height: 100px;
-  background: url(../img/footer/wave.png);
+  background: url(../img/footer/wave2.png);
   background-size: 1000px 100px;
 }
 

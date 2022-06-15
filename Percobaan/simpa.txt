@@ -1,0 +1,109 @@
+HTML 
+
+<!-- New Get To Know Japan -->
+    <div id="knowaboutjapan2">
+      <div class="container-fluid">
+        <div class="row rowjapan">
+          <div class="image12">
+            <img src="img/knowjapan2/1.jpg" alt="CULTURE">
+            <div class="details">
+              <h2>CULTURE</h2>
+              <p>Japanese culture is ancient and is filled with rites and traditions to honor the family. Because Japan is an island country, it was able to moderate the influence of other cultures for centuries. </p>
+            </div>
+          </div>
+          <div class="image12">
+            <img src="img/knowjapan2/2.jpg" alt="CULINARY">
+            <div class="details">
+              <h2>CULINARY</h2>
+              <p>Japanese cuisine encompasses the regional and traditional foods of Japan, which have developed through centuries of political, economic, and social changes. </p>
+            </div>
+          </div>
+          <div class="image12">
+            <img src="img/knowjapan2/3.jpg" alt="TECHNOLOGY">
+            <div class="details">
+              <h2>TECHNOLOGY</h2>
+              <p>Japan is also advanced and a global leader in the robotics, natural sciences, aerospace exploration and biomedical research areas.</p>
+            </div>
+          </div>
+          <div class="image12">
+            <img src="img/knowjapan2/4.jpg" alt="SEASON">
+            <div class="details">
+              <h2>SEASON</h2>
+              <p>In Japan, one year is divided into four periods. The period from March to May is spring, June to August is summer, September to November is autumn, and December to February is winter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Akhir New Get To Know Japan -->
+
+CSS 
+.rowjapan {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image12 {
+  position: relative;
+  flex: 1;
+  height: 300px;
+  margin: 20px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.image12 img {
+  opacity: 0.8;
+  position: relative;
+  transition: 0.6s;
+  transition-property: opacity;
+  justify-content: center;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+.image12:hover img {
+  opacity: 1;
+}
+
+.image12 .details {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: whitesmoke;
+  width: 100%;
+  height: 100%;
+}
+
+.image12 .details h2 {
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 400px;
+  margin-top: 70px;
+  transition: 0.4s;
+  transition-property: transform;
+}
+
+.image12:hover .details h2 {
+  transform: translateY(-30px);
+}
+
+.image12 .details p {
+  margin: 30px 15px;
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  opacity: 0;
+  transition: 0.8s;
+  transition-property: opacity, transform;
+}
+
+.image12:hover .details p {
+  opacity: 1;
+  transform: translateY(-40px);
+}
