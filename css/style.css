@@ -1121,6 +1121,10 @@ footer .wave#wave4 {
 }
 
 /* Book */
+#booking {
+  color: whitesmoke;
+}
+
 #booking .book-form {
   padding: 2rem;
 }
